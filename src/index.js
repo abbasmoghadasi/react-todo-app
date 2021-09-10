@@ -1,6 +1,10 @@
 import React from "react";
 import reactDom from "react-dom";
+import TodoContainer from "./component/TodoContainer";
 
-const element = <h1>Hello from React</h1>;
-reactDom.render(element, document.getElementById("root"));
-console.log(element);
+reactDom.render(
+  <React.StrictMode>
+    <TodoContainer />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
