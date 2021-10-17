@@ -11,7 +11,9 @@ class InputTodo extends Component {
   };
   handelSubmit = (e) => {
     e.preventDefault();
-    console.log("submited form");
+    {
+      this.props.addTodoProps(this.state.title);
+    }
   };
   render() {
     return (
