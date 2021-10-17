@@ -2,19 +2,24 @@ import React, { Component } from "react";
 
 class InputTodo extends Component {
   state = {
-    title: "text",
+    title: "",
   };
   onChange = (e) => {
     this.setState({
-      title: e.target.value,
+      [e.target.name]: e.target.value,
     });
+  };
+  handelSubmit = (e) => {
+    e.preventDefault();
+    console.log("submited form");
   };
   render() {
     return (
-      <form>
+      <form onSubmit={this.handelSubmit}>
         <input
           type="text"
           placeholder="Add Todo ..."
+          name="title"
           value={this.state.title}
           onChange={this.onChange}
         />
