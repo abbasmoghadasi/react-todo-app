@@ -11,9 +11,10 @@ class InputTodo extends Component {
   };
   handelSubmit = (e) => {
     e.preventDefault();
-    {
-      this.props.addTodoProps(this.state.title);
-    }
+    this.props.addTodoProps(this.state.title);
+    this.setState({
+      title: "",
+    });
   };
   render() {
     return (
